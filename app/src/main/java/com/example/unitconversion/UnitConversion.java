@@ -37,7 +37,7 @@ public class UnitConversion extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 String text = s.toString();
                 if (text.length() == 0 || "".equals(text)) {
-                    tv_kg.setText("Result");
+                    tv_kg.setText("kg");
                     Toast.makeText(UnitConversion.this, "Please enter some value in grams field.", Toast.LENGTH_SHORT).show();
                 } else {
                     //EditText is not empty
@@ -67,14 +67,14 @@ public class UnitConversion extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 String text1 = s.toString();
                 if (text1.length() == 0 || "".equals(text1)) {
-                    tv_m.setText("Result");
+                    tv_m.setText("m");
                     Toast.makeText(UnitConversion.this, "Please enter some value in cm field.", Toast.LENGTH_SHORT).show();
                 } else {
                     //EditText is not empty
                     double value = 0;
                     if (!"".equals(text1)) {
                         value = Double.parseDouble(text1);
-                        value = value * 0.01;
+                        value = value / 100;
                     }
                     tv_m.setText(Double.toString(value) + " m");
                 }
@@ -98,7 +98,7 @@ public class UnitConversion extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 String text2 = s.toString();
                 if (text2.length() == 0 || "".equals(text2)) {
-                    tv_km.setText("Result");
+                    tv_km.setText("km");
                     Toast.makeText(UnitConversion.this, "Please enter some value in meters field.", Toast.LENGTH_SHORT).show();
                 } else {
                     //EditText is not empty
